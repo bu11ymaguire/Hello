@@ -9,7 +9,8 @@ struct info
     int grade;
 };
 
-int main() {
+int main() 
+{
     info students[3];
 
     students[0].name = "John";   // 문자열 직접 할당
@@ -34,21 +35,33 @@ int main() {
     double avg = (students[0].age + students[1].age + students[2].age) / 3.0;  // 3.0으로 나눠야 정확한 실수형 결과
     cout << "Average age: " << avg << endl;
 
-	info* student1 = &students[0];
-	info* stuent2 = &students[1];
-	info* stuent3 = &students[2];
+    info* student1 = new info;
+	info* student2 = new info;
+	info* student3 = new info;
+
+	student1->name = students[0].name;
+	student1->age = students[0].age;    
+	student1->grade = students[0].grade;
+
+	student2->name = students[1].name;  
+	student2->age = students[1].age;
+	student2->grade = students[1].grade;
+
+	student3->name = students[2].name;  
+	student3->age = students[2].age;
+	student3->grade = students[2].grade;
 
 	student1->name = "Horolo";
 	student1->age = 10;
     student1->grade = 4;
 
-    stuent2->name = "Hello Therer";
-    stuent2->age = 5;
-    stuent2->grade = 0;
+    student2->name = "Hello Therer";
+    student2->age = 5;
+    student2->grade = 0;
 
-	stuent3->name = "HAHA";
-    stuent3->age = 7;
-    stuent3->grade = 1;
+	student3->name = "HAHA";
+    student3->age = 7;
+    student3->grade = 1;
 
     for (int i= 0; i < 3; i++) 
     {
@@ -57,6 +70,9 @@ int main() {
 		cout << students[i].grade << endl;
     }
 
-	cout << sizeof(students) << endl;
+	delete student1;
+    delete student2;
+    delete student3;
+
     return 0;
 }
