@@ -42,7 +42,7 @@ public:
 	{
 		if (amount < 0) 
 		{
-			cout << "amount는 음수가 될 수 없습니다.";
+			cout << "amount는 음수가 될 수 없습니다." << endl;
 		}
 		else 
 		{
@@ -67,7 +67,10 @@ public:
 	{
 		return balance;
 	}
-
+	string accH() 
+	{
+		return accountHolder;
+	}
 };
 
 int main() 
@@ -82,7 +85,7 @@ int main()
 	int a = 1;
 	while (a != 0) 
 	{
-		cout << "BankAccoutn Sys" << endl;
+		cout <<"안녕하세요."<<acc.accH()<< "BankAccount Sys" << endl;
 		cout << "1:잔액 확인 2:입금 3:출금 0:종료:";
 		cin >> a;
 		switch (a) 
@@ -91,7 +94,7 @@ int main()
 			cout << "안녕히 가세요.";
 			break;
 		case 1:
-			cout << acc.getBalance();
+			cout << acc.getBalance() << endl;
 			break;
 		case 2:
 			double dp;
@@ -112,3 +115,4 @@ int main()
 	}
 	return 0;
 }
+
