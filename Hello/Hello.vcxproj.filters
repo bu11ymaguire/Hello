@@ -18,5 +18,8 @@
     <ClCompile Include="hi.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="c1ass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
