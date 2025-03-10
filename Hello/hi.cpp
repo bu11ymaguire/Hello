@@ -2,7 +2,8 @@
 #include <string>  // <cstring> 대신 <string> 사용
 using namespace std;
 
-struct info {
+struct info 
+{
     string name;
     int age;
     int grade;
@@ -23,6 +24,13 @@ int main() {
     students[2].age = 15;
     students[2].grade = 8;
 
+    for (int i = 0; i < 3; i++)
+    {
+        cout << students[i].name << endl;
+        cout << students[i].age << endl;
+        cout << students[i].grade << endl;
+    }
+    
     double avg = (students[0].age + students[1].age + students[2].age) / 3.0;  // 3.0으로 나눠야 정확한 실수형 결과
     cout << "Average age: " << avg << endl;
 
@@ -42,8 +50,13 @@ int main() {
     stuent3->age = 7;
     stuent3->grade = 1;
 
+    for (int i= 0; i < 3; i++) 
+    {
+        cout << students[i].name << endl;
+		cout << students[i].age << endl;
+		cout << students[i].grade << endl;
+    }
 
-
-
+	cout << sizeof(students) << endl;
     return 0;
 }
