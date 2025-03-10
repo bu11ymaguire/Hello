@@ -4,20 +4,32 @@ using namespace std;
 
 class Rectangle
 {
-	int get_area(int width, int height)
+private:
+	int width;
+	int height;
+
+public:
+	Rectangle(int a, int b) 
+	{
+		width = a;
+		height = b;
+	}
+
+	int get_area()
 	{
 		return width * height;
 	}
-	int get_parameter(int width, int height) 
+	int get_parameter()
 	{
 		return 2 * (width + height);
 	}
+	
 };
 
 int main() 
 {
 	Rectangle A(10, 20);
-	cout << A.get_area(10, 20) << endl;
-	cout << A.get_parameter(10, 20) << endl;
+	cout << A.get_area() << endl;
+	cout << A.get_parameter() << endl;
 	return 0;
 }
