@@ -26,5 +26,24 @@ int main() {
     double avg = (students[0].age + students[1].age + students[2].age) / 3.0;  // 3.0으로 나눠야 정확한 실수형 결과
     cout << "Average age: " << avg << endl;
 
+	info* student1 = &students[0];
+	info* stuent2 = &students[1];
+	info* stuent3 = &students[2];
+
+	student1->name = "Horolo";
+	student1->age = 10;
+    student1->grade = 4;
+
+    stuent2->name = "Hello Therer";
+    stuent2->age = 5;
+    stuent2->grade = 0;
+
+	stuent3->name = "HAHA";
+    stuent3->age = 7;
+    stuent3->grade = 1;
+
+
+
+
     return 0;
 }
