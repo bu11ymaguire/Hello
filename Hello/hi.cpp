@@ -2,17 +2,30 @@
 #include <cstring>
 using namespace std;
 
-const int kMaxStr = 100;
+struct info
+{
+	char name[100];
+	int age;
+	int grade;
+};
 
 int main()
 {
-	char args1[] = "Hello World!";
-	char* args2 = new char[kMaxStr];
-	strcpy_s(args2, (strlen(args1) + 1), args1);
-	cout << args1 << endl;
-	cout << args2 << endl;
-	cout << &(args1) << " " << static_cast<void*>(args1) << endl; //&args1과 static_cast<void*>(args1)은 스택 메모리 주소를 가리킨다.
-	cout << &(args2) << " " << static_cast<void*>(args2) << endl; //&args2는 스택 메모리 주소를 가리키고, static_cast<void*>(args2)는 힙 메모리 주소를 가리킨다.
-	delete[] args2;
+	info students[3];
+	students[0].name = "John";
+	students[0].age = 20;
+	students[0].grade = 11;
+
+	students[1].name = "Kylian";
+	students[1].age = 12;
+	students[1].grade = 6;
+
+	students[2].name = "Lionel";
+	students[2].age = 15;
+	students[2].grade = 8;
+
+	double avg = (students[0].age + students[1].age + students[2].age)/3;
+	cout << "Average age: " << avg << endl;
+
 	return 0;
 }
