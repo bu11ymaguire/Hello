@@ -3,52 +3,7 @@
 using namespace std;
 //새 분기로 전화번호부 만들기
 
-class BankAccount
-{
-private:
-	string accountHolder;
-	double balance;
-public:
-	BankAccount(string ac, double bl) 
-	{
-		accountHolder = ac;
-		balance = bl;
-	}
 
-	void deposit(double amount) 
-	{
-		if (amount < 0) 
-		{
-			cout << "amount는 음수가 될 수 없습니다." << endl;
-		}
-		else 
-		{
-			balance += amount;
-		}
-	}
-
-	void withdraw(double amount)
-	{
-		if (balance < amount) 
-		{
-			cout << "Warning!:" << "잔액 부족." << endl;
-		}
-		else 
-		{
-			balance -= amount;
-			cout << amount << "이 출력" << endl;
-		}
-	}
-
-	double getBalance() 
-	{
-		return balance;
-	}
-	string accH() 
-	{
-		return accountHolder;
-	}
-};
 
 class MyString
 {
