@@ -2,7 +2,7 @@
 #define BankAccount_H
 #include <iostream>
 #include <string>
-
+// 네임스페이스 std 사용은 지양하기
 
 
 class BankAccount

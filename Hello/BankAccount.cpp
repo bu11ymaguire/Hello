@@ -2,9 +2,9 @@
 #include <cstring>
 #include "BankAccount.h"
 
-using namespace
+using namespace std;
 
-BankAccount::BankAccount() : acountHolder(0) {}
+BankAccount::BankAccount(string ac, double bl) : accountHolder(ac),balance(bl) {}
 
 void BankAccount::deposit(double amount) 
 {
@@ -23,7 +23,7 @@ void BankAccount::withdraw(double amount)
 	}
 }
 
-double BankAccount::getbalance() 
+double BankAccount::getBalance() 
 {
 	return balance;
 }
