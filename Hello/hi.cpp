@@ -126,11 +126,11 @@ public:
 	void Append(MyString* app_str) // 같은 타입을 매개변수로 사용 가능
 	{
 		int old_size = size_;
-		Resize(size_+app_str->size_);
+		Resize(size_+ app_str->size_);
 
-		for (int i = old_size; i < size_; i++)
+		for (int i = 0; i < app_str->size_; i++)
 		{
-			str_[i] = app_str->str_[size_ - i];
+			str_[i+old_size] = app_str->str_[i];
 		}
 	}
 
@@ -143,6 +143,10 @@ int main()
 {
 	MyString A("Hello World!");
 	A.Print();
+	MyString B("Hope is a dream without a sleep");
+	A.Append(&B);
+	A.Print();
+	return 0;
 }
 
 
